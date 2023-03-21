@@ -1,0 +1,29 @@
+{
+  "name": "tvale-store",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "description": "in this project i will build an car part store using express, mongodb, and ejs as view template",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagovale/tvale_store.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagovale/tvale_store/issues"
+  },
+  "homepage": "https://github.com/thiagovale/tvale_store#readme"
+}
