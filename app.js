@@ -12,7 +12,7 @@ var app = express();
 // connecting to mongo db
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@mdn-library.rcgbqry.mongodb.net/tvale_store?retryWrites=true&w=majority`;
+const mongoDB = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.ituijyq.mongodb.net/tvale_store?retryWrites=true&w=majority`;
 
 main().catch((err) => console.log(err));
 async function main() {
