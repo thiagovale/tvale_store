@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "devStart": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -27,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/thiagovale/tvale_store/issues"
   },
-  "homepage": "https://github.com/thiagovale/tvale_store#readme"
+  "homepage": "https://github.com/thiagovale/tvale_store#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }

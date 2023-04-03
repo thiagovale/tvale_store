@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-/* GET home page. */
+//redirect home page to catalog
 router.get("/", function (req, res, next) {
   res.redirect("/catalog");
 });
