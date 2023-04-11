@@ -1,0 +1,18 @@
+<%- include('header'); -%>
+
+  <h1><%= title %></h1>
+
+  <ul>
+    <% if (carpart_list.length) { %>
+      <% carpart_list.forEach(function(carpart) { %>
+        <div class="carpart-card">
+          <li><a href="<%= carpart.url %>"><%= carpart.name %></a></li>
+          <p> $ <%=carpart.price%> </p>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <li>There are no categories.</li>
+    <% } %>
+  </ul>
+
+  <%- include('footer'); -%>

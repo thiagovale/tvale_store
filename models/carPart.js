@@ -12,7 +12,7 @@ const CarPartSchema = new Schema({
 // Virtual for car's URL
 CarPartSchema.virtual("url").get(function () {
   // We don't use an arrow function as we'll need the this object
-  return `/part/${this._id}`;
+  return `/catalog/carpart/${this._id}`;
 });
 
 // Export model

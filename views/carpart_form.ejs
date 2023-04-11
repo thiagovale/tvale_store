@@ -1,0 +1,44 @@
+<%- include('header'); -%>
+
+<h1><%= title %></h1>
+
+<form method="POST" action="">
+
+  <div class="form-group">
+    <label for="name">Car Part Name:</label>
+    <input id="name" class="form-control" type="text" placeholder="2JZ Engine" name="name" required="true" value="<%= carpart ? carpart.name : '' %>" />
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea id="description" class="form-control" type="textarea" placeholder="Description" name="description" required="true"><%= carpart ? carpart.description : '' %></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input id="price" class="form-control" type="number" step="any"placeholder="999.99" name="price" value="<%= carpart ? carpart.price : '' %>" required="true" />
+  </div>
+
+  <div class="form-group">
+    <label>Category:</label>
+    <% categories.forEach(function(category) { %>
+      <div style="display: inline; padding-right:10px;">
+        <input class="checkbox-input" type="checkbox" name="category" id="<%= category._id %>" value="<%= category._id %>" <%= category.checked ? 'checked' : '' %> />
+        <label for="<%= category._id %>"><%= category.name %></label>
+      </div>
+    <% }); %>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
+
+<% if (errors) { %>
+  <ul>
+    <% errors.forEach(function(error) { %>
+      <li><%= error.msg %></li>
+    <% }); %>
+  </ul>
+<% } %>
+
+<%- include('footer'); -%>

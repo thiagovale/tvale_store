@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+
+<h1><%= title %></h1>
+
+<form method="POST" action="">
+  <div class="form-group">
+    <label for="name">Category name:</label>
+    <input id="name" class="form-control" type="text" placeholder="Brakes, Transmission etc." name="name" value="<%= typeof category === 'undefined' ? '' : category.name %>">
+    <label for="description">Category description:</label>
+    <input id="description" class="form-control" type="text" placeholder="The best brakes, transmission, etc for your car..." name="description" value="<%= typeof category === 'undefined' ? '' : category.description %>">
+  </div>
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+<% if (errors) { %>
+
+  <ul>
+    <% errors.forEach(function(error) { %>
+      <li><%= error.msg %></li>
+    <% }); %>
+  </ul>
+<% } %>
+
+<%- include('footer'); -%>
